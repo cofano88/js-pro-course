@@ -1,0 +1,37 @@
+.clicker {
+  height: 150px;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+}
+
+.counter {
+  flex-basis: 66.6%;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: silver;
+}
+
+.panel {
+  flex-basis: 33.3%;
+  display: flex;
+  align-items: stretch;
+  font-size: 32px;
+}
+
+.increment {
+  flex-basis: 33.3%;
+  background-color: green;
+}
+
+.reload {
+  flex-basis: 33.3%;
+  background-color: yellow;
+}
+
+.decrement {
+  flex-basis: 33.3%;
+  background-color: red;
+}
