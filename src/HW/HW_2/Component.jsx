@@ -15,9 +15,11 @@ export class Component extends React.Component {
     });
   }
   decrement() {
-    this.setState({
-      count: this.state.count - 1,
-    });
+    if (this.state.count > 0) {
+      this.setState({
+        count: this.state.count - 1,
+      });
+    }
   }
   reload() {
     this.setState({
@@ -34,7 +36,9 @@ export class Component extends React.Component {
             <button className="increment" onClick={() => this.increment()}>
               +
             </button>
-            <button className="reload" onClick={() => this.reload()}></button>
+            <button className="reload" onClick={() => this.reload()}>
+              RELOAD
+            </button>
             <button className="decrement" onClick={() => this.decrement()}>
               -
             </button>
