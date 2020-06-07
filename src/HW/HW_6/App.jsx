@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter } from "react-router-dom";
-// import general from "./general-stats.json";
-// import countries from "./countries-search.json";
 import { Nav } from "./Nav";
 import { RoutedContent } from "./RoutedContent";
 
@@ -36,14 +34,6 @@ export function App() {
     };
     getData();
   }, [currentPage, limitItems, search, order]);
-
-  // setLimit((limit) => {
-  //   setLimitItems(limit);
-  // });
-
-  // setCurrPage((page) => {
-  //   setCurrentPage(page);
-  // });
 
   function setLimit(limit) {
     setLimitItems(limit);

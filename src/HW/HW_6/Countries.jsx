@@ -9,13 +9,6 @@ export function Countries(props) {
     props.setSearch(changeEvent.target.value);
   }
 
-  // function setPage(event) {
-  //   const value = event.target.value;
-  //   if (1 <= value && value <= props.totalPages && value && !isNaN(value)) {
-  //     props.setPage(value);
-  //   }
-  // }
-
   return (
     <>
       <div className="tools">
