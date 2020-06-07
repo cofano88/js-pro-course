@@ -1,15 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Login } from "./Login";
 import { Register } from "./Register";
 import { Switch, Route, BrowserRouter, Redirect } from "react-router-dom";
-// import { useHistory } from "react-router-dom";
 import { Main } from "./Main";
+import data from "./users.json";
+
+// [
+//   { login: "mike", password: 11111, name: "mike" },
+//   { login: "hannah", password: 55555, name: "hannah" },
+// ];
 
 export function App() {
-  const [usersData, setUsersData] = useState([
-    { login: "mike", password: 11111, name: "mike" },
-    { login: "hannah", password: 55555, name: "hannah" },
-  ]);
+  const [usersData, setUsersData] = useState(data.users);
   const [currentUser, setCurrentUser] = useState();
   function verifyUser(user) {
     const users = usersData;
@@ -20,7 +22,16 @@ export function App() {
       }
     }
   }
-  //   const history = useHistory();
+
+  // useEffect(() => {
+  //   const getData = async () => {
+  //     const responce = await fetch("http://localhost:3004/users");
+  //     const data = await responce.json();
+  //     setUsersData(data);
+  //   };
+  //   getData();
+  // }, []);
+
   function addUser(user) {
     const users = usersData;
     for (let i = 0; i < users.length; i++) {
@@ -31,26 +42,10 @@ export function App() {
         users.push(user);
         setUsersData(users);
         setCurrentUser(user);
-        // history.push("/main");
+        break;
       }
     }
   }
-  //   const [currentUser, setCurrentUser] = useState({});
-  //   function setUserLogin(login) {
-  //     const user = currentUser;
-  //     user.login = login;
-  //     setCurrentUser(user);
-  //   }
-  //   function setUserPassword(password) {
-  //     const user = currentUser;
-  //     user.password = password;
-  //     setCurrentUser(user);
-  //   }
-  //   function setUserName(name) {
-  //     const user = currentUser;
-  //     user.name = name;
-  //     setCurrentUser(user);
-  //   }
 
   return (
     <>

@@ -8,13 +8,6 @@ export function Login(props) {
     if (props.verifyUser(currentUser)) {
       history.push("/main");
     }
-    // try {
-    //   await Auth.signIn(email, password);
-    //   userHasAuthenticated(true);
-    //   history.push("/");
-    // } catch (e) {
-    //   alert(e.message);
-    // }
   }
   const [currentUser, setCurrentUser] = useState({});
   function setUserLogin(event) {

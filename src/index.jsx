@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
-import { App } from "./HW/HW_5/App";
+// import "./index.css";
+import { App } from "./HW/Calc/App";
 
 ReactDOM.render(
   <>
