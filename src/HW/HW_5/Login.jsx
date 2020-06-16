@@ -21,21 +21,6 @@ export function Login(props) {
     setCurrentUser(user);
   }
 
-  // function setUserName(name) {
-  //   const user = currentUser;
-  //   user.name = name;
-  //   setCurrentUser(user);
-  // }
-  // function changeLogin(event) {
-  //   props.setUserLogin(event.target.value);
-  // }
-  // function changePassword(event) {
-  //   props.setUserPassword(event.target.value);
-  // }
-  // function changeName(event) {
-  //   props.setUserName(event.target.value);
-  // }
-
   return (
     <form>
       <label>

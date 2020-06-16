@@ -13,6 +13,7 @@ export function App() {
   }
 
   function result() {
+    // eslint-disable-next-line
     setDisplay(eval(display));
   }
 

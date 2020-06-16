@@ -1,14 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Login } from "./Login";
 import { Register } from "./Register";
 import { Switch, Route, BrowserRouter, Redirect } from "react-router-dom";
 import { Main } from "./Main";
 import data from "./users.json";
-
-// [
-//   { login: "mike", password: 11111, name: "mike" },
-//   { login: "hannah", password: 55555, name: "hannah" },
-// ];
 
 export function App() {
   const [usersData, setUsersData] = useState(data.users);
@@ -22,15 +17,6 @@ export function App() {
       }
     }
   }
-
-  // useEffect(() => {
-  //   const getData = async () => {
-  //     const responce = await fetch("http://localhost:3004/users");
-  //     const data = await responce.json();
-  //     setUsersData(data);
-  //   };
-  //   getData();
-  // }, []);
 
   function addUser(user) {
     const users = usersData;
