@@ -7,7 +7,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   changeTodoStatus: (id, status) => {
-    dispatch({ type: "CHANGE_TODO_STATUS", id: id, status: status });
+    dispatch({ type: "CHANGE_TODO_STATUS", id, status });
   },
 });
 

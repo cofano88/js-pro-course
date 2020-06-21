@@ -11,7 +11,10 @@ export function App() {
   function verifyUser(user) {
     const users = usersData;
     for (let i = 0; i < users.length; i++) {
-      if (users[i].login == user.login && users[i].password == user.password) {
+      if (
+        users[i].login === user.login &&
+        users[i].password === user.password
+      ) {
         setCurrentUser(users[i]);
         return true;
       }
@@ -21,7 +24,10 @@ export function App() {
   function addUser(user) {
     const users = usersData;
     for (let i = 0; i < users.length; i++) {
-      if (users[i].login == user.login && users[i].password == user.password) {
+      if (
+        users[i].login === user.login &&
+        users[i].password === user.password
+      ) {
         alert("this user has already added!");
       } else {
         const users = usersData;

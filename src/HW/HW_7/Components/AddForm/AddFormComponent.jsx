@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import { FormRadioInput } from "./FormRadioInput";
 export function AddFormComponent({ add_todo }) {
   const [inputNameTodo, setInputNameTodo] = useState("");
-  const [inputStatusTodo, setInputStatusTodo] = useState("");
+  const [inputStatusTodo, setInputStatusTodo] = useState("removed");
 
   function AddTodo() {
     const todo = {};
@@ -26,7 +27,32 @@ export function AddFormComponent({ add_todo }) {
         />
       </label>
       <div className="Radio">
-        <input
+        <FormRadioInput
+          id={"status_1"}
+          type={"current"}
+          inputStatusTodo={inputStatusTodo}
+          setInputStatusTodo={(value) => {
+            setInputStatusTodo(value);
+          }}
+        />
+        <FormRadioInput
+          id={"status_2"}
+          type={"checked"}
+          inputStatusTodo={inputStatusTodo}
+          setInputStatusTodo={(value) => {
+            setInputStatusTodo(value);
+          }}
+        />
+        <FormRadioInput
+          id={"status_3"}
+          type={"removed"}
+          inputStatusTodo={inputStatusTodo}
+          setInputStatusTodo={(value) => {
+            setInputStatusTodo(value);
+          }}
+        />
+
+        {/* <input
           type="radio"
           id="status_1"
           name="status"
@@ -60,7 +86,7 @@ export function AddFormComponent({ add_todo }) {
             setInputStatusTodo(e.target.value);
           }}
         />
-        <label for="status_3">removed</label>
+        <label for="status_3">removed</label> */}
       </div>
       <button className="AddTodoBtn" onClick={() => AddTodo()}>
         Add

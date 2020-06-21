@@ -53,6 +53,27 @@ export function TodosComponent({ todos, changeTodoStatus }) {
               <li className="Todo">
                 <div>{todo.todoName}</div>
                 <div>{todo.status}</div>
+                <div classname="TodoTools">
+                  {todo.status === "current" ? (
+                    <div>
+                      <button
+                        onClick={() => {
+                          changeTodoStatus(todo.id, "checked");
+                        }}
+                      >
+                        checked
+                      </button>
+                    </div>
+                  ) : todo.status === "checked" ? (
+                    <div>
+                      <button>remove</button>
+                    </div>
+                  ) : (
+                    <div>
+                      <button>restore</button>
+                    </div>
+                  )}
+                </div>
               </li>
             ))}
         </ul>

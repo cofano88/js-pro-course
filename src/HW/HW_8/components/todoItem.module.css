@@ -1,0 +1,10 @@
+.item {
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid #84a9ac;
+  padding: 0;
+}
+
+.item:hover {
+  background-color: #a0c1b8;
+}

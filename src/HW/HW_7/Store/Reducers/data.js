@@ -7,6 +7,7 @@ const initialState = {
 };
 
 export const data = (state = initialState, action) => {
+  console.log(action);
   switch (action.type) {
     case "ADD_TODO": {
       return { ...state, todos: [...state.todos, action.todo] };
@@ -15,7 +16,7 @@ export const data = (state = initialState, action) => {
       return {
         ...state,
         todos: state.todos.map((todo) => {
-          if (todo.id === action.todoId) {
+          if (todo.id === action.id) {
             return { ...todo, status: action.status };
           }
           return todo;
