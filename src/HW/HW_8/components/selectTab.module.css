@@ -1,0 +1,10 @@
+.selectTab_wrap {
+  padding: 15px;
+  border-bottom: 1px solid #84a9ac;
+}
+input {
+  margin-right: 3px;
+}
+label {
+  margin-right: 10px;
+}

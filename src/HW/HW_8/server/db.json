@@ -1,0 +1,8 @@
+{
+  "todos": [
+    { "id": "1", "todoName": "to dress", "status": "current" },
+    { "id": "2", "todoName": "to swim", "status": "checked" },
+    { "id": "3", "todoName": "to eat", "status": "removed" },
+    { "id": "4", "todoName": "swing", "status": "current" }
+  ]
+}

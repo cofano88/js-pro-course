@@ -1,0 +1,10 @@
+h3 {
+  padding-top: 30px;
+}
+.addForm_wrap {
+  border-bottom: 1px solid #84a9ac;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
